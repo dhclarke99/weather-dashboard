@@ -4,3 +4,29 @@
     flex-direction: row;
     justify-content: center;
 }
+
+header {
+    background-color: lightblue;
+    display: flex;
+    justify-content: flex-end;
+}
+
+h1 {
+    margin-right: 500px
+
+}
+
+h3 {
+    color: white;
+
+
+}
+
+.col-2 {
+    background-color: darkviolet;
+    margin: 10px
+}
+
+.row {
+    min-width: 1050px;
+}
