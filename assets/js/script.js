@@ -1,11 +1,27 @@
 // API key 
 var apiKey = "1c39f5ca13c985d309cd5081d8f2b159";
 var button = document.querySelector('.btn')
+var cityName = document.querySelector("#search-input-sidenav")
 
+function getCityName() {
+    console.log(cityName.value)
+    var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName.value + "&limit=1&appid=1c39f5ca13c985d309cd5081d8f2b159";
+
+    fetch(requestUrl)
+    .then(function (response) {
+    
+      return response.json();
+      
+      
+    }) .then(function (data) {
+        console.log(data)
+        getApi()
+
+    })}
 
 function getApi() {
     // replace `octocat` with anyone else's GitHub username
-    var requestUrl = "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=1c39f5ca13c985d309cd5081d8f2b159";
+    var requestUrl = "http://api.openweathermap.org/data/2.5/forecast?id=" + id + "&appid=1c39f5ca13c985d309cd5081d8f2b159";
   
     fetch(requestUrl)
       .then(function (response) {
@@ -17,12 +33,13 @@ function getApi() {
       .then(function (data) {
         console.log(data)
         console.log('Github Repo Issues \n----------');
-        for (var i = 0; i < data.length; i++) {
-          console.log(data[i].url);
-          console.log(data[i].user.login);
+        console.log(data.city.name)
+        console.log(data.length)
         }
-      });
+      );
   }
+
   //getApi()
   
-  button.addEventListener('click', getApi);
+  button.addEventListener('click', getCityName);
+  //button.addEventListener('click', getApi)
