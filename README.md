@@ -19,7 +19,7 @@ Type any city into the search bar and click "submit" to retrieve live weather da
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-  ![Screenshot of webpage in use.](./assets/images/Screen%20Shot%202023-04-03%20at%2011.13.39%20PM.png)
+  ![Screenshot of webpage in use.](./assets/images/WeatherDashboard-FinalScreenshot.png)
    
 
 
