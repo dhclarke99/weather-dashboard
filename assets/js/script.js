@@ -73,13 +73,13 @@ function getCityName() {
         var day1UnixTime = data.list[8].dt;
         var day1DateFormat = dayjs.unix(day1UnixTime).format('MMM D, YYYY, hh:mm a');
         var day2UnixTime = data.list[16].dt;
-        var dat2DateFormat = dayjs.unix(day2UnixTime).format('MMM D, YYYY, hh:mm a');
+        var day2DateFormat = dayjs.unix(day2UnixTime).format('MMM D, YYYY, hh:mm a');
         var day3UnixTime = data.list[24].dt;
-        var dat3DateFormat = dayjs.unix(day3UnixTime).format('MMM D, YYYY, hh:mm a');
+        var day3DateFormat = dayjs.unix(day3UnixTime).format('MMM D, YYYY, hh:mm a');
         var day4UnixTime = data.list[32].dt;
-        var dat4DateFormat = dayjs.unix(day4UnixTime).format('MMM D, YYYY, hh:mm a');
+        var day4DateFormat = dayjs.unix(day4UnixTime).format('MMM D, YYYY, hh:mm a');
         var day5UnixTime = data.list[39].dt;
-        var dat5DateFormat = dayjs.unix(day5UnixTime).format('MMM D, YYYY, hh:mm a');
+        var day5DateFormat = dayjs.unix(day5UnixTime).format('MMM D, YYYY, hh:mm a');
         var day1Temp = (data.list[1].main.temp);
         var day1tHumidity = (data.list[1].main.humidity);
         var day1Wind = (data.list[1].wind.speed);
@@ -106,6 +106,50 @@ function getCityName() {
         item1.textContent = ("Temp: " + day1Temp + " degrees Farenheit");
         item2.textContent = ("Wind: " + day1Wind + " MPH ");
         item3.textContent = ("Humidity: " + day1tHumidity + " % ");
+
+        dayTwo.children[0].textContent = (cityName.value + " " + day2DateFormat);
+        var item1 = document.querySelector("#day2-temp");
+         console.log(item1);
+         var item2 = document.querySelector("#day2-wind");
+         var item3 = document.querySelector("#day2-humidity");
+       
+        
+         item1.textContent = ("Temp: " + day2Temp + " degrees Farenheit");
+         item2.textContent = ("Wind: " + day2Wind + " MPH ");
+         item3.textContent = ("Humidity: " + day2tHumidity + " % ");
+
+         dayThree.children[0].textContent = (cityName.value + " " + day3DateFormat);
+        var item1 = document.querySelector("#day3-temp");
+         console.log(item1);
+         var item2 = document.querySelector("#day3-wind");
+         var item3 = document.querySelector("#day3-humidity");
+       
+        
+         item1.textContent = ("Temp: " + day3Temp + " degrees Farenheit");
+         item2.textContent = ("Wind: " + day3Wind + " MPH ");
+         item3.textContent = ("Humidity: " + day3tHumidity + " % ");
+
+         dayFour.children[0].textContent = (cityName.value + " " + day4DateFormat);
+        var item1 = document.querySelector("#day4-temp");
+         console.log(item1);
+         var item2 = document.querySelector("#day4-wind");
+         var item3 = document.querySelector("#day4-humidity");
+       
+        
+         item1.textContent = ("Temp: " + day4Temp + " degrees Farenheit");
+         item2.textContent = ("Wind: " + day4Wind + " MPH ");
+         item3.textContent = ("Humidity: " + day4tHumidity + " % ");
+
+         dayFive.children[0].textContent = (cityName.value + " " + day5DateFormat);
+        var item1 = document.querySelector("#day5-temp");
+         console.log(item1);
+         var item2 = document.querySelector("#day5-wind");
+         var item3 = document.querySelector("#day5-humidity");
+       
+        
+         item1.textContent = ("Temp: " + day5Temp + " degrees Farenheit");
+         item2.textContent = ("Wind: " + day5Wind + " MPH ");
+         item3.textContent = ("Humidity: " + day5tHumidity + " % ");
 
         }
         //1680588000
