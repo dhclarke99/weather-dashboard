@@ -71,15 +71,15 @@ function getCityName() {
         } set5DayWeather()
         function set5DayWeather(){
         var day1UnixTime = data.list[8].dt;
-        var day1DateFormat = dayjs.unix(day1UnixTime).format('MMM D, YYYY, hh:mm a');
+        var day1DateFormat = dayjs.unix(day1UnixTime).format('MMM D, YYYY');
         var day2UnixTime = data.list[16].dt;
-        var day2DateFormat = dayjs.unix(day2UnixTime).format('MMM D, YYYY, hh:mm a');
+        var day2DateFormat = dayjs.unix(day2UnixTime).format('MMM D, YYYY');
         var day3UnixTime = data.list[24].dt;
-        var day3DateFormat = dayjs.unix(day3UnixTime).format('MMM D, YYYY, hh:mm a');
+        var day3DateFormat = dayjs.unix(day3UnixTime).format('MMM D, YYYY');
         var day4UnixTime = data.list[32].dt;
-        var day4DateFormat = dayjs.unix(day4UnixTime).format('MMM D, YYYY, hh:mm a');
+        var day4DateFormat = dayjs.unix(day4UnixTime).format('MMM D, YYYY');
         var day5UnixTime = data.list[39].dt;
-        var day5DateFormat = dayjs.unix(day5UnixTime).format('MMM D, YYYY, hh:mm a');
+        var day5DateFormat = dayjs.unix(day5UnixTime).format('MMM D, YYYY');
         var day1Temp = (data.list[1].main.temp);
         var day1tHumidity = (data.list[1].main.humidity);
         var day1Wind = (data.list[1].wind.speed);
@@ -96,7 +96,7 @@ function getCityName() {
         var day5tHumidity = (data.list[5].main.humidity);
         var day5Wind = (data.list[5].wind.speed);
 
-        dayOne.children[0].textContent = (cityName.value + " " + day1DateFormat);
+        dayOne.children[0].textContent = (day1DateFormat);
        var item1 = document.querySelector("#day1-temp");
         console.log(item1);
         var item2 = document.querySelector("#day1-wind");
@@ -107,7 +107,7 @@ function getCityName() {
         item2.textContent = ("Wind: " + day1Wind + " MPH ");
         item3.textContent = ("Humidity: " + day1tHumidity + " % ");
 
-        dayTwo.children[0].textContent = (cityName.value + " " + day2DateFormat);
+        dayTwo.children[0].textContent = (day2DateFormat);
         var item1 = document.querySelector("#day2-temp");
          console.log(item1);
          var item2 = document.querySelector("#day2-wind");
@@ -118,7 +118,7 @@ function getCityName() {
          item2.textContent = ("Wind: " + day2Wind + " MPH ");
          item3.textContent = ("Humidity: " + day2tHumidity + " % ");
 
-         dayThree.children[0].textContent = (cityName.value + " " + day3DateFormat);
+         dayThree.children[0].textContent = (day3DateFormat);
         var item1 = document.querySelector("#day3-temp");
          console.log(item1);
          var item2 = document.querySelector("#day3-wind");
@@ -129,7 +129,7 @@ function getCityName() {
          item2.textContent = ("Wind: " + day3Wind + " MPH ");
          item3.textContent = ("Humidity: " + day3tHumidity + " % ");
 
-         dayFour.children[0].textContent = (cityName.value + " " + day4DateFormat);
+         dayFour.children[0].textContent = (day4DateFormat);
         var item1 = document.querySelector("#day4-temp");
          console.log(item1);
          var item2 = document.querySelector("#day4-wind");
@@ -140,7 +140,7 @@ function getCityName() {
          item2.textContent = ("Wind: " + day4Wind + " MPH ");
          item3.textContent = ("Humidity: " + day4tHumidity + " % ");
 
-         dayFive.children[0].textContent = (cityName.value + " " + day5DateFormat);
+         dayFive.children[0].textContent = (day5DateFormat);
         var item1 = document.querySelector("#day5-temp");
          console.log(item1);
          var item2 = document.querySelector("#day5-wind");
