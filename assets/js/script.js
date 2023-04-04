@@ -20,7 +20,7 @@ function getCityName() {
     var lon = (data[0].lon)
     console.log(lat)
     console.log(lon)
-    var requestUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=1c39f5ca13c985d309cd5081d8f2b159";
+    var requestUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=1c39f5ca13c985d309cd5081d8f2b159";
     
     fetch(requestUrl)
       .then(function (response) {
@@ -29,11 +29,19 @@ function getCityName() {
         
         
       })
-      .then(function (data) {
-        
+      .then(function (data) { 
         console.log(data)
-        console.log('Github Repo Issues \n----------');
-        
+        var currentunixTime = data.list[0].dt
+        console.log(currentunixTime)
+        var dateFormat = dayjs.unix(currentunixTime).format('MMM D, YYYY, hh:mm a')
+        console.log(dateFormat)
+        currentTemp = (data.list[0].main.temp)
+        currentHumidity = (data.list[0].main.humidity)
+        currentWind = (data.list[0].wind.speed)
+        console.log(currentTemp)
+        console.log(currentHumidity)
+        console.log(currentWind)
+
         }
       );
   })}
