@@ -15,29 +15,28 @@ function getCityName() {
       
     }) .then(function (data) {
         console.log(data)
-        getApi()
 
-    })}
-
-function getApi() {
-    // replace `octocat` with anyone else's GitHub username
-    var requestUrl = "http://api.openweathermap.org/data/2.5/forecast?id=" + id + "&appid=1c39f5ca13c985d309cd5081d8f2b159";
-  
+    var lat = (data[0].lat)
+    var lon = (data[0].lon)
+    console.log(lat)
+    console.log(lon)
+    var requestUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=1c39f5ca13c985d309cd5081d8f2b159";
+    
     fetch(requestUrl)
       .then(function (response) {
       
         return response.json();
-        console.log(response)
+        
         
       })
       .then(function (data) {
+        
         console.log(data)
         console.log('Github Repo Issues \n----------');
-        console.log(data.city.name)
-        console.log(data.length)
+        
         }
       );
-  }
+  })}
 
   //getApi()
   
