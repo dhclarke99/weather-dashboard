@@ -1,8 +1,12 @@
-.container {
+#main {
     margin-left: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.container {
+    margin: 10px;
 }
 
 header {
@@ -22,11 +26,29 @@ h3 {
 
 }
 
+li {
+    list-style: none;
+}
+
+.col-12 {
+    border-style: solid;
+    min-height: 100px;
+    border-radius: 8px;
+    border-width: 2px;
+}
+
 .col-2 {
     background-color: darkviolet;
-    margin: 10px
+    margin: 10px;
+    
 }
 
 .row {
-    min-width: 1050px;
+   width: 100%;
+}
+
+#scroll-container {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #8080806e;
 }
