@@ -55,7 +55,12 @@ function getCityName() {
         var currentTemp = (data.list[0].main.temp);
         var currentHumidity = (data.list[0].main.humidity);
         var currentWind = (data.list[0].wind.speed);
+        var currentIcon = (data.list[0].weather[0].icon)
 
+        console.log(currentIcon)
+        var IconRequestURL = "https://openweathermap.org/img/wn/"+ currentIcon + "@2x.png";
+        console.log(IconRequestURL)
+       
         
       
 
@@ -71,6 +76,10 @@ function getCityName() {
         var newCityName = cityName.value.charAt(0).toUpperCase() + cityName.value.slice(1)
         console.log(newCityName)
         currentCity.children[0].textContent = (newCityName + " " + dateFormat);
+       
+        var parent = document.querySelector("#current-img")
+        parent.setAttribute("src", IconRequestURL)
+        
         var item1 = document.querySelector("#temp");
         var item2 = document.querySelector("#wind");
         var item3 = document.querySelector("#humidity");
@@ -97,18 +106,28 @@ function getCityName() {
         var day1Temp = (data.list[1].main.temp);
         var day1tHumidity = (data.list[1].main.humidity);
         var day1Wind = (data.list[1].wind.speed);
+        var day1Icon = (data.list[1].weather[0].icon)
+        var day1IconRequestURL = "https://openweathermap.org/img/wn/"+ day1Icon + "@2x.png";
         var day2Temp = (data.list[2].main.temp);
         var day2tHumidity = (data.list[2].main.humidity);
         var day2Wind = (data.list[2].wind.speed);
+        var day2Icon = (data.list[2].weather[0].icon)
+        var day2IconRequestURL = "https://openweathermap.org/img/wn/"+ day2Icon + "@2x.png";
         var day3Temp = (data.list[3].main.temp);
         var day3tHumidity = (data.list[3].main.humidity);
         var day3Wind = (data.list[3].wind.speed);
+        var day3Icon = (data.list[3].weather[0].icon)
+        var day3IconRequestURL = "https://openweathermap.org/img/wn/"+ day3Icon + "@2x.png";
         var day4Temp = (data.list[4].main.temp);
         var day4tHumidity = (data.list[4].main.humidity);
         var day4Wind = (data.list[4].wind.speed);
+        var day4Icon = (data.list[4].weather[0].icon)
+        var day4IconRequestURL = "https://openweathermap.org/img/wn/"+ day4Icon + "@2x.png";
         var day5Temp = (data.list[5].main.temp);
         var day5tHumidity = (data.list[5].main.humidity);
         var day5Wind = (data.list[5].wind.speed);
+        var day5Icon = (data.list[5].weather[0].icon)
+        var day5IconRequestURL = "https://openweathermap.org/img/wn/"+ day5Icon + "@2x.png";
         console.log(data.list[5].weather[0].icon)
 
         dayOne.children[0].textContent = day1DateFormat;
@@ -117,8 +136,9 @@ function getCityName() {
         console.log(item1);
         var item2 = document.querySelector("#day1-wind");
         var item3 = document.querySelector("#day1-humidity");
+        var item4 = document.querySelector("#day1-img");
       
-       
+       item4.setAttribute("src", day1IconRequestURL)
         item1.textContent = ("Temp: " + day1Temp + "℉");
         item2.textContent = ("Wind: " + day1Wind + " MPH ");
         item3.textContent = ("Humidity: " + day1tHumidity + " % ");
@@ -128,6 +148,9 @@ function getCityName() {
          console.log(item1);
          var item2 = document.querySelector("#day2-wind");
          var item3 = document.querySelector("#day2-humidity");
+         var item4 = document.querySelector("#day2-img");
+      
+       item4.setAttribute("src", day2IconRequestURL)
        
         
          item1.textContent = ("Temp: " + day2Temp + "℉");
@@ -139,6 +162,9 @@ function getCityName() {
          console.log(item1);
          var item2 = document.querySelector("#day3-wind");
          var item3 = document.querySelector("#day3-humidity");
+         var item4 = document.querySelector("#day3-img");
+      
+       item4.setAttribute("src", day3IconRequestURL)
        
         
          item1.textContent = ("Temp: " + day3Temp + "℉");
@@ -150,6 +176,9 @@ function getCityName() {
          console.log(item1);
          var item2 = document.querySelector("#day4-wind");
          var item3 = document.querySelector("#day4-humidity");
+         var item4 = document.querySelector("#day4-img");
+      
+       item4.setAttribute("src", day4IconRequestURL)
        
         
          item1.textContent = ("Temp: " + day4Temp + "℉");
@@ -161,6 +190,9 @@ function getCityName() {
          console.log(item1);
          var item2 = document.querySelector("#day5-wind");
          var item3 = document.querySelector("#day5-humidity");
+         var item4 = document.querySelector("#day5-img");
+      
+       item4.setAttribute("src", day5IconRequestURL)
        
         
          item1.textContent = ("Temp: " + day5Temp + "℉");

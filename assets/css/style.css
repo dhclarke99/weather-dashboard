@@ -89,6 +89,10 @@ padding-bottom: 20px;
     padding-bottom: 10px;
 }
 
+#forecast-header {
+    margin-top: 15px;
+}
+
 .local-storage {
     display: flex;
     margin-top: 5px;
