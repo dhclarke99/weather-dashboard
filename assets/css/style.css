@@ -58,20 +58,18 @@ ul {
 
 .current-temp {
     margin-top: 20px;
-
+    margin-bottom: 20px;
 }
 
 .main-temp-li {
     margin-top: 20px;
     color: black;
-
 }
 
 
 .sub-temp-li {
     margin-top: 20px;
     color: white;
-
 }
 
 .five-day-li {
