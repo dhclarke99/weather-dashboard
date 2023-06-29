@@ -111,7 +111,8 @@ function getCityName() {
         var day5Wind = (data.list[5].wind.speed);
         console.log(data.list[5].weather[0].icon)
 
-        dayOne.children[0].textContent = (day1DateFormat);
+        dayOne.children[0].textContent = day1DateFormat;
+        console.log(day1DateFormat)
        var item1 = document.querySelector("#day1-temp");
         console.log(item1);
         var item2 = document.querySelector("#day1-wind");
@@ -186,6 +187,7 @@ function getCityName() {
   })}
 
   function getLocalStorage () {
+    if (localStorage.length > 0) {
     var cities = localStorage.getItem("cities").split(",")
     console.log(cities);
     var exists = {};
@@ -200,6 +202,7 @@ function getCityName() {
       }
       
     }
+  } 
   };
   
   getLocalStorage();

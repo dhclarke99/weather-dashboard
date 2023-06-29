@@ -14,97 +14,108 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-   
-    <main id="main">
-    <div class ="sidebar col-2" data-mdb-close-on-esc="false" data-mdb-hidden="false"
-        data-mdb-position="absolute" data-mdb-focus-trap="false" data-mdb-scroll-container="#scroll-container"
-        role="navigation">
-        <div class="text-left">
-            <h2 class="py-4">Search for a City: </h2>
-        </div>
-        <div id="scroll-container" >
-            <div>
-                <div>
-                    <div class="form-outline w-auto">
-                        <input id="city-name" type="search" id="form1" class="form-control" />
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="button">Search</button>
-                        </div>
 
+    <main id="main">
+        <div class="sidebar col-2" data-mdb-close-on-esc="false" data-mdb-hidden="false" data-mdb-position="absolute"
+            data-mdb-focus-trap="false" data-mdb-scroll-container="#scroll-container" role="navigation">
+            <div class="text-left">
+                <h2 class="py-4">Search for a City: </h2>
+            </div>
+            <div id="scroll-container">
+                <div>
+                    <div>
+                        <div class="form-outline w-auto">
+                            <input id="city-name" type="search" id="form1" class="form-control" />
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" type="button">Search</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="local-storage">
+
+            </div>
+        </div>
+
+        <div class="container col-10">
+            <div class="row">
+                <div class="col-12">
+                    <h2></h2>
+                    <div class="current-temp">
+                        <li class="main-temp-li" id="temp"></li>
+                        <li class="main-temp-li" id="wind"></li>
+                        <li class="main-temp-li" id="humidity"></li>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="five-day col-special">
+                    <div class ="background" id="day-1">
+                    <h3></h3>
+                    <div class="five-day-li">
+                        <li class="sub-temp-li" id="day1-temp"></li>
+                        <li class="sub-temp-li" id="day1-wind"></li>
+                        <li class="sub-temp-li" id="day1-humidity"></li>
                     </div>
                 </div>
 
+                </div>
+                <div class="five-day col-special">
+                    <div class ="background" id="day-2">
+                    <h3></h3>
+                    <div class="five-day-li">
+                        <li class="sub-temp-li" id="day2-temp"></li>
+                        <li class="sub-temp-li" id="day2-wind"></li>
+                        <li class="sub-temp-li" id="day2-humidity"></li>
+                    </div>
+                </div>
+
+                </div>
+                <div class="five-day col-special" >
+                    <div class ="background" id="day-3">
+                    <h3></h3>
+                    <div class="five-day-li">
+                        <li class="sub-temp-li" id="day3-temp"></li>
+                        <li class="sub-temp-li" id="day3-wind"></li>
+                        <li class="sub-temp-li" id="day3-humidity"></li>
+                    </div>
+                </div>
+
+                </div>
+                <div class="five-day col-special">
+                    <div class ="background" id="day-4">
+                    <h3></h3>
+                    <div class="five-day-li">
+                        <li class="sub-temp-li" id="day4-temp"></li>
+                        <li class="sub-temp-li" id="day4-wind"></li>
+                        <li class="sub-temp-li" id="day4-humidity"></li>
+                    </div>
+                </div>
+
+                </div>
+                <div class="five-day col-special">
+                    <div class ="background" id="day-5">
+                    <h3></h3>
+                    <div class="five-day-li">
+                        <li class="sub-temp-li" id="day5-temp"></li>
+                        <li class="sub-temp-li" id="day5-wind"></li>
+                        <li class="sub-temp-li" id="day5-humidity"></li>
+                    </div>
+                </div>
+
+                </div>
             </div>
+
         </div>
-        <div class = "local-storage">
-           
-        </div>
-    </div>
-    
-    <div class="container col-10">
-        <div class="row">
-          <div class="col-12">
-            <h2></h2>
-            <div class="current-temp">
-                <li class = "main-temp-li" id ="temp"></li>
-                <li class ="main-temp-li" id ="wind"></li>
-                <li class ="main-temp-li" id="humidity"></li>
-            </div>
-        </div>
-        </div>
-        <div class = "row">
-        
-          <div class="five-day col-2" id="day-1">
-            <h3></h3>
-            <div>
-                <li id="day1-temp"></li>
-                <li id="day1-wind"></li>
-                <li id="day1-humidity"></li>
-            </div>
-            </div>
-          <div class="five-day col-2" id="day-2">
-            <h3></h3>
-            <div>
-                <li id="day2-temp"></li>
-                <li id="day2-wind"></li>
-                <li id="day2-humidity"></li>
-            </div>
-            </div>
-          <div class="five-day col-2" id="day-3">
-            <h3></h3>
-            <div>
-                <li id="day3-temp"></li>
-                <li id="day3-wind"></li>
-                <li id="day3-humidity"></li>
-            </div>
-            </div>
-          <div class="five-day col-2" id="day-4">
-            <h3></h3>
-            <div>
-                <li id="day4-temp"></li>
-                <li id="day4-wind"></li>
-                <li id="day4-humidity"></li>
-            </div>
-            </div>
-          <div class="five-day col-2" id="day-5">
-            <h3></h3>
-            <div>
-                <li id="day5-temp"></li>
-                <li id="day5-wind"></li>
-                <li id="day5-humidity"></li>
-            </div>
-            </div>
-        </div>
-        
-      </div>
 
     </main>
 
-    <script
-    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-    crossorigin="anonymous"
-  ></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <!-- jQuery UI <script> tag -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

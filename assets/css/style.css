@@ -9,7 +9,7 @@
 }
 
 header {
-    background-color: lightblue;
+    background-image: linear-gradient(to left, #1e00ff , #8e8dbe);
     display: flex;
     justify-content: flex-end;
 }
@@ -33,6 +33,14 @@ ul {
     margin: 0px;
 }
 
+.col-special {
+    
+        flex: 0 0 auto;
+        width: 20%;
+    
+
+ }
+
 
 
 .col-12 {
@@ -43,8 +51,8 @@ ul {
 }
 
 .five-day {
-    background-color: darkviolet;
-    margin: 10px;
+    background-color: white;
+    margin-top: 10px;
     
 }
 
@@ -55,7 +63,19 @@ ul {
 
 .main-temp-li {
     margin-top: 20px;
+    color: black;
 
+}
+
+
+.sub-temp-li {
+    margin-top: 20px;
+    color: white;
+
+}
+
+.five-day-li {
+padding-bottom: 20px;
 }
 
 .row {
@@ -79,6 +99,10 @@ ul {
     margin-top: 10px;
     background-color: #808080a3;
     border-style: none;
+}
+
+.background {
+    background-color: #04043ae8; ;
 }
 
 
