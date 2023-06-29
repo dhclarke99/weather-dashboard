@@ -1,16 +1,38 @@
 // API key 
 var apiKey = "1c39f5ca13c985d309cd5081d8f2b159";
 var button = document.querySelector('.btn');
-var cityName = document.querySelector("#search-input-sidenav");
+var cityName = document.querySelector("#city-name");
 var currentCity = document.querySelector(".col-12");
+var previousCities = document.querySelector(".local-storage");
 var dayOne = document.querySelector("#day-1");
 var dayTwo = document.querySelector("#day-2");
 var dayThree = document.querySelector("#day-3");
 var dayFour = document.querySelector("#day-4");
 var dayFive = document.querySelector("#day-5");
 
+
+function getLocalStorage () {
+  var cities = localStorage.getItem("cities").split(",")
+  console.log(cities);
+  var exists = {};
+  for (var i = 0; i<cities.length; i++ ) {
+    if (!exists[cities[i]]) {
+      var button = document.createElement("button");
+      button.setAttribute("class", "previous-city-button")
+    button.textContent = cities[i]
+    previousCities.appendChild(button)
+    exists[cities[i]] = true
+    }
+    
+  }
+};
+
+getLocalStorage();
+
 function getCityName() {
+
     console.log(cityName.value);
+    
     var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName.value + "&limit=1&appid=1c39f5ca13c985d309cd5081d8f2b159";
 
     fetch(requestUrl)
@@ -56,7 +78,10 @@ function getCityName() {
         console.log(currentHumidity);
         console.log(currentWind);
         console.log(currentCity);
-        currentCity.children[0].textContent = (cityName.value + " " + dateFormat);
+
+        var newCityName = cityName.value.charAt(0).toUpperCase() + cityName.value.slice(1)
+        console.log(newCityName)
+        currentCity.children[0].textContent = (newCityName + " " + dateFormat);
         var item1 = document.querySelector(".temp");
         var item2 = document.querySelector(".wind");
         var item3 = document.querySelector(".humidity");
@@ -66,7 +91,7 @@ function getCityName() {
         item2.textContent = ("Wind: " + currentWind + " MPH ");
         item3.textContent = ("Humidity: " + currentHumidity + " % ");
 
-
+        setLocalStorage(newCityName)
 
         } set5DayWeather()
         function set5DayWeather(){
@@ -152,6 +177,19 @@ function getCityName() {
          item3.textContent = ("Humidity: " + day5tHumidity + " % ");
 
         }
+
+        function setLocalStorage(newCityName) {
+          var previousCities = localStorage.getItem("cities")
+          if (previousCities !== null) {
+          var newCities = [previousCities, newCityName]
+          localStorage.setItem("cities", newCities);
+          } else {
+            var newCities = [newCityName]
+            localStorage.setItem("cities", newCities);
+          }
+
+        }
+        
         //1680588000
         //1680598800
         //1680609600

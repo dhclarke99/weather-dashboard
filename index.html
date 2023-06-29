@@ -14,19 +14,19 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <!-- Sidenav-->
-    <main class = "container" id="main">
-    <div id="col-4" data-mdb-close-on-esc="false" class="sidenav" data-mdb-hidden="false"
+   
+    <main id="main">
+    <div class ="sidebar col-2" data-mdb-close-on-esc="false" data-mdb-hidden="false"
         data-mdb-position="absolute" data-mdb-focus-trap="false" data-mdb-scroll-container="#scroll-container"
         role="navigation">
         <div class="text-left">
             <h2 class="py-4">Search for a City: </h2>
         </div>
-        <div id="scroll-container" class="sidenav-menu">
-            <div class="sidenav-item">
-                <div class="input-group rounded my-2">
+        <div id="scroll-container" >
+            <div>
+                <div>
                     <div class="form-outline w-auto">
-                        <input id="search-input-sidenav" type="search" id="form1" class="form-control" />
+                        <input id="city-name" type="search" id="form1" class="form-control" />
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary" type="button">Search</button>
                         </div>
@@ -36,16 +36,12 @@
 
             </div>
         </div>
-        <div >
-            <ul>
-                <li></li>
-                <li></li>
-               
-            </ul>
+        <div class = "local-storage">
+           
         </div>
     </div>
     
-    <div class="container">
+    <div class="container col-10">
         <div class="row">
           <div class="col-12">
             <h2></h2>
@@ -56,7 +52,10 @@
 
             </ul>
         </div>
-          <div class="col-2" id="day-1">
+        </div>
+        <div class = "row">
+        
+          <div class="five-day col-2" id="day-1">
             <h3></h3>
             <ul>
                 <li id="day1-temp"></li>
@@ -64,7 +63,7 @@
                 <li id="day1-humidity"></li>
             </ul>
             </div>
-          <div class="col-2" id="day-2">
+          <div class="five-day col-2" id="day-2">
             <h3></h3>
             <ul>
                 <li id="day2-temp"></li>
@@ -72,7 +71,7 @@
                 <li id="day2-humidity"></li>
             </ul>
             </div>
-          <div class="col-2" id="day-3">
+          <div class="five-day col-2" id="day-3">
             <h3></h3>
             <ul>
                 <li id="day3-temp"></li>
@@ -80,7 +79,7 @@
                 <li id="day3-humidity"></li>
             </ul>
             </div>
-          <div class="col-2" id="day-4">
+          <div class="five-day col-2" id="day-4">
             <h3></h3>
             <ul>
                 <li id="day4-temp"></li>
@@ -88,7 +87,7 @@
                 <li id="day4-humidity"></li>
             </ul>
             </div>
-          <div class="col-2" id="day-5">
+          <div class="five-day col-2" id="day-5">
             <h3></h3>
             <ul>
                 <li id="day5-temp"></li>
@@ -97,14 +96,10 @@
             </ul>
             </div>
         </div>
+        
       </div>
 
     </main>
-
-
-    <!-- Sidenav-->
-
-
 
     <script
     src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"

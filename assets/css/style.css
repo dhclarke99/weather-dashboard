@@ -30,14 +30,20 @@ li {
     list-style: none;
 }
 
+ul {
+    margin: 0px;
+}
+
+
+
 .col-12 {
     border-style: solid;
-    min-height: 100px;
+    min-height: 200px;
     border-radius: 8px;
     border-width: 2px;
 }
 
-.col-2 {
+.five-day {
     background-color: darkviolet;
     margin: 10px;
     
@@ -51,4 +57,19 @@ li {
     border-bottom-style: solid;
     border-bottom-width: 2px;
     border-bottom-color: #8080806e;
+    padding-bottom: 10px;
 }
+
+.local-storage {
+    display: flex;
+    margin-top: 5px;
+    flex-direction: column;
+}
+
+.previous-city-button {
+    margin-top: 10px;
+    background-color: #808080a3;
+    border-style: none;
+}
+
+
