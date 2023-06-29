@@ -10,24 +10,13 @@ var dayThree = document.querySelector("#day-3");
 var dayFour = document.querySelector("#day-4");
 var dayFive = document.querySelector("#day-5");
 
-
-function getLocalStorage () {
-  var cities = localStorage.getItem("cities").split(",")
-  console.log(cities);
-  var exists = {};
-  for (var i = 0; i<cities.length; i++ ) {
-    if (!exists[cities[i]]) {
-      var button = document.createElement("button");
-      button.setAttribute("class", "previous-city-button")
-    button.textContent = cities[i]
-    previousCities.appendChild(button)
-    exists[cities[i]] = true
-    }
-    
-  }
-};
-
-getLocalStorage();
+function getPreviousCityName(e) {
+  var clickedButton = e.target.textContent;
+  console.log(clickedButton);
+  cityName.setAttribute("value", clickedButton)
+  console.log(cityName.value);
+  getCityName()
+}
 
 function getCityName() {
 
@@ -189,17 +178,31 @@ function getCityName() {
           }
 
         }
-        
-        //1680588000
-        //1680598800
-        //1680609600
 
 
         }
       );
   })}
 
-  //getApi()
+  function getLocalStorage () {
+    var cities = localStorage.getItem("cities").split(",")
+    console.log(cities);
+    var exists = {};
+    for (var i = 0; i<cities.length; i++ ) {
+      if (!exists[cities[i]]) {
+        var previousCityButton = document.createElement("button");
+        previousCityButton.setAttribute("class", "previous-city-button")
+        previousCityButton.textContent = cities[i]
+      previousCities.appendChild(previousCityButton)
+      exists[cities[i]] = true
+      previousCityButton.addEventListener('click', getPreviousCityName)
+      }
+      
+    }
+  };
+  
+  getLocalStorage();
+ 
   
   button.addEventListener('click', getCityName);
-  //button.addEventListener('click', getApi)
+ 
